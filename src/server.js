@@ -26,4 +26,8 @@ app.get("/product", async (req, res) => {
   res.send(response);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hola");
+});
+
 app.listen(3000);
