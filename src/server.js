@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 import { connectDB } from "./database";
 import productModel from "./schemas/product";
 connectDB();
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/addproduct", (req, res) => {
   const response = req.body;
